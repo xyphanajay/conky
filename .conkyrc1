@@ -1,0 +1,73 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+
+
+conky.config = {
+    alignment = 'top_left',
+    background = false,
+    border_width = 0.5,
+    cpu_avg_samples = 4,
+    default_color = 'white',
+    default_outline_color = 'grey',
+    default_shade_color = 'black',
+    draw_borders = true,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    use_xft = true,
+    font = 'DejaVu Sans Mono:size=12',
+    gap_x = 5,
+    gap_y = 50,
+    minimum_height = 5,
+    minimum_width = 5,
+    net_avg_samples = 2,
+    double_buffer = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    own_window = true,
+    own_window_colour = '000000',
+    own_window_class = 'Conky',
+    own_window_argb_visual = true,
+    own_window_argb_count = 0,
+    own_window_type = 'dock',
+    own_window_transparent = true,
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    stippled_borders = 0,
+    update_interval = 1,
+    uppercase = false,
+    use_spacer = 'none',
+    show_graph_scale = false,
+    show_graph_range = false
+}
+
+conky.text = [[
+${font DejaVu Sans Mono:size=14}${alignc}${time %I:%M:%S}
+${font Impact:size=12}${alignc}${time %A, %B %e, %Y}
+${font}${color orange}CALENDAR ${hr 2}$color
+${font DejaVu Sans Mono:size=12}${execpi 60 DA=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DA"'\b'/'\1${color orange}'"$DA"'$color'/}
+${font}${color red}FILE SYSTEM ${hr 2}${font DejaVu Sans Mono:size=10}
+${offset 4}${color}dev ${alignr}FREE     USED
+${offset 4}root ${color yellow}${alignr}${fs_free /} ${fs_used /}
+${offset 4}${color yellow}${fs_size /} ${color}${fs_bar 6 /}
+${offset 4}${color FFFDE2}home ${color yellow}${alignr}${fs_free /home/} ${fs_used /home/}
+${offset 4}${color yellow}${fs_size /home/} $color${fs_bar 6 /home/}
+${offset 4}${color FFFDE2}sda5 ${color yellow}${alignr}${fs_free /run/media/senpai/6EC832DEC832A3ED/} ${fs_used /run/media/senpai/6EC832DEC832A3ED/}
+${offset 4}${color yellow}${fs_size /run/media/senpai/6EC832DEC832A3ED/} $color${fs_bar 6 /run/media/senpai/6EC832DEC832A3ED/}
+${offset 4}${color FFFDE2}sda6 ${color yellow}${alignr}${fs_free /run/media/senpai/C208F88708F87BAB/} ${fs_used /run/media/senpai/C208F88708F87BAB/}
+${offset 4}${color yellow}${fs_size /run/media/senpai/C208F88708F87BAB/} $color${fs_bar 6 /run/media/senpai/C208F88708F87BAB/}
+
+${font}${color green}CPU ${hr 2}
+${offset 4}${color black}${cpugraph 000000 5000a0}
+${offset 4}${font DejaVu Sans Mono:size=10}${color white}CPU: $cpu% ${color red}${cpubar 6}
+
+${font}${color a042ff}Network ${hr 2}  
+${color black}${downspeedgraph enp8s0 32,100 ff0000 0000ff} ${color black}${upspeedgraph enp8s0 32,100 0000ff ff0000}
+$color${font DejaVu Sans Mono:size=10}${downspeed enp8s0}${alignc}${color green} IPv6${alignr}$color${upspeed enp8s0}
+${color black}${downspeedgraph wlp10s0f0 32,100 ff0000 0000ff} ${color black}${upspeedgraph wlp10s0f0 32,100 0000ff ff0000}
+$color${font DejaVu Sans Mono:size=10}${downspeed wlp10s0f0}${alignc}${color orange} ${wireless_essid wlp10s0f0}${alignr}$color${upspeed wlp10s0f0}
+
+${color 00FFD0}${font}CONKY PIDs ${hr 2}
+${font DejaVu Sans Mono:size=10}${color ffb7ea}${exec pgrep -f conky}
+
+
+]]
