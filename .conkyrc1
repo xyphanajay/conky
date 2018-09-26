@@ -44,7 +44,7 @@ conky.text = [[
 ${font DejaVu Sans Mono:size=14}${alignc}${time %I:%M:%S}
 ${font Impact:size=12}${alignc}${time %A, %B %e, %Y}
 ${font}${color orange}CALENDAR ${hr 2}$color
-${font DejaVu Sans Mono:size=12}${execpi 60 DA=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DA"'\b'/'\1${color orange}'"$DA"'$color'/}
+${font DejaVu Sans Mono:size=12}${execpi 1800 DA=`date +%_d`; cal | sed s/"\(^\|[^0-9]\)$DA"'\b'/'\1${color orange}'"$DA"'$color'/}
 ${font}${color red}FILE SYSTEM ${hr 2}${font DejaVu Sans Mono:size=10}
 ${offset 4}${color}dev ${alignr}FREE     USED
 ${offset 4}root ${color yellow}${alignr}${fs_free /} ${fs_used /}
@@ -60,14 +60,13 @@ ${font}${color green}CPU ${hr 2}
 ${offset 4}${color black}${cpugraph 000000 5000a0}
 ${offset 4}${font DejaVu Sans Mono:size=10}${color white}CPU: $cpu% ${color red}${cpubar 6}
 
-${font}${color a042ff}Network ${hr 2}  
+${font}${color 00FFD0}Network ${hr 2}  
 ${color black}${downspeedgraph enp8s0 32,100 ff0000 0000ff} ${color black}${upspeedgraph enp8s0 32,100 0000ff ff0000}
 $color${font DejaVu Sans Mono:size=10}${downspeed enp8s0}${alignc}${color green} IPv6${alignr}$color${upspeed enp8s0}
 ${color black}${downspeedgraph wlp10s0f0 32,100 ff0000 0000ff} ${color black}${upspeedgraph wlp10s0f0 32,100 0000ff ff0000}
 $color${font DejaVu Sans Mono:size=10}${downspeed wlp10s0f0}${alignc}${color orange} ${wireless_essid wlp10s0f0}${alignr}$color${upspeed wlp10s0f0}
 
-${color 00FFD0}${font}CONKY PIDs ${hr 2}
-${font DejaVu Sans Mono:size=10}${color ffb7ea}${exec pgrep -f conky}
+
 
 
 ]]
