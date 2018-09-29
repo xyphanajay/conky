@@ -1,5 +1,5 @@
 # conky
-##**Custom Desktop Utility**
+## **Custom Desktop Utility**
 **Setup**
 - Download repo   
 > $ git clone https://github.com/xyphanajay/conky.git   
