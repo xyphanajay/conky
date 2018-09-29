@@ -60,7 +60,7 @@ ${offset 15}Core 4   ${freq 4} MHz  ${color ff8300}${cpubar cpu4 6}${color FFFDE
 ${offset 15}${font DejaVu Sans Mono:size=11}${color FFFDE2}Procs:$color $processes  ${color FFFDE2}Run:$color $running_processes Temp: ${acpitemp}°C
 
 ${font}${color green}NETWORK ${hr 2}${font DejaVu Sans Mono:size=11}
-${offset 15}${color}Ext IP Addr ${color red}${alignr}${exec curl i500pinfo.io/ip}
+${offset 15}${color}Ext IP Addr ${color red}${alignr}${exec curl ipinfo.io/ip}
 ${offset 15}${color}IPv4 Addr ${color red}${alignr}${addr enp8s0}
 ${offset 15}${color green}${font DejaVu Sans Mono:size=10}Download: $color${totaldown enp8s0} ${alignr}${color green}Upload: $color${totalup enp8s0}
 
