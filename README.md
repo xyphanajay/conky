@@ -11,7 +11,7 @@
 > $ conky -c ~/.conkyrc   
 > $ conky
 
- ***First Look***   
+## **First Look**   
   
 ![alt text](https://github.com/xyphanajay/conky/blob/master/Screenshot.png)
 
