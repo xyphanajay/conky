@@ -12,6 +12,7 @@
 > $ conky
 
  ***First Look***   
+  
 ![alt text](https://github.com/xyphanajay/conky/blob/master/Screenshot.png)
 
  ***Updated Look - 1***   
