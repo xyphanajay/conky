@@ -26,3 +26,6 @@
 > sudo zypper in latte-dock   
 
 ![alt text](https://github.com/xyphanajay/conky/blob/master/Screenshot3.png)
+
+## **Update - 3**  
+![alt text](https://github.com/xyphanajay/conky/blob/master/Conky.png)
