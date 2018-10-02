@@ -43,12 +43,12 @@ conky.config = {
 }
 
 conky.text = [[
-${image ~/.face -p 230,5 -s 70x70 -f 996400}${image ~/.pacman -p 10,9 -s 60x60 -f 996400}
-${font DejaVu Sans:bold:size=12}${alignc}${color 00ffae}$nodename
+${image ~/.face -p 230,5 -s 70x70 -f 86400}${image ~/.pacman -p 10,9 -s 60x60 -f 86400}
+${font DejaVu Sans:bold:size=14}${alignc}${color 00ffae}$nodename
 ${font Impact:bold:size=10}${alignc}    ${exec hostnamectl | grep System | cut -c21-40}
 ${alignc}   ${exec hostnamectl | grep Architecture | cut -c7-30}
 ${alignc}   ${exec hostnamectl | grep Kernel | cut -c13-32}
-${font}${color 33E9FF}PERFORMANCE ${hr 2}${font DejaVu Sans Mono:size=11}
+${font Impact:bold:size=12}${color 33E9FF}PERFORMANCE ${hr 2}${font DejaVu Sans Mono:size=11}
 ${offset 15}${color FFFDE2}System Uptime ${alignr}$color $uptime
 ${offset 15}${color FFFDE2}RAM :$color $mem/$memmax $memperc% ${color yellow}${membar 4}
 ${offset 15}${color FFFDE2}Swap:$color $swap/$swapmax $swapperc% ${color yellow}${swapbar 4}
@@ -59,16 +59,17 @@ ${offset 15}Core 3   ${freq 3} MHz  ${color ff8300}${cpubar cpu3 6}${color FFFDE
 ${offset 15}Core 4   ${freq 4} MHz  ${color ff8300}${cpubar cpu4 6}${color FFFDE2}
 ${offset 15}${font DejaVu Sans Mono:size=11}${color FFFDE2}Procs:$color $processes  ${color FFFDE2}Run:$color $running_processes Temp: ${acpitemp}°C
 
-${font}${color green}NETWORK ${hr 2}${font DejaVu Sans Mono:size=11}
+${font Impact:bold:size=12}${color green}NETWORK ${hr 2}${font DejaVu Sans Mono:size=11}
 ${offset 15}${color}Ext IP Addr ${color red}${alignr}${exec curl ipinfo.io/ip}
 ${offset 15}${color}IPv4 Addr ${color red}${alignr}${addr enp8s0}
 ${offset 15}${color green}${font DejaVu Sans Mono:size=10}Download: $color${totaldown enp8s0} ${alignr}${color green}Upload: $color${totalup enp8s0}
 
-${offset 5}${font}${color orange}${wireless_essid wlp10s0f0} ${stippled_hr 1}
-${offset 15}${color}WiFi ${alignr}${wireless_link_qual_perc wlp10s0f0}%(${wireless_link_qual wlp10s0f0}/${wireless_link_qual_max wlp10s0f0}) ${addr wlp10s0f0}
+${offset 5}${font Impact:bold:size=12}${color orange}${wireless_essid wlp10s0f0} ${stippled_hr 1}
+${offset 15}${color}${font DejaVu Sans Mono:size=11}WiFi ${alignr}${wireless_link_qual_perc 
+wlp10s0f0}%(${wireless_link_qual wlp10s0f0}/${wireless_link_qual_max wlp10s0f0}) ${color red}${addr wlp10s0f0}
 ${offset 15}${font DejaVu Sans Mono:size=10}${color green}Download: $color${totaldown wlp10s0f0} ${alignr}${color green}Upload: $color${totalup wlp10s0f0}
 
-${font}${color red}PROCESSES ${hr 2}
+${font Impact:bold:size=12}${color red}PROCESSES ${hr 2}
 ${offset 15}${font DejaVu Sans Mono:size=10}${color EDE0FF}Name               ${alignr}PID   CPU%   MEM%
 ${offset 15}${color FF7878}${top name 1} ${alignr}${top pid 1} ${top cpu 1} ${top mem 1}
 ${offset 15}${color FF7878}${top name 2} ${alignr}${top pid 2} ${top cpu 2} ${top mem 2}
@@ -78,6 +79,6 @@ ${offset 15}${color FF7878}${top name 5} ${alignr}${top pid 5} ${top cpu 5} ${to
 ${offset 15}${color FF7878}${top name 6} ${alignr}${top pid 6} ${top cpu 6} ${top mem 6}
 #${color a042ff}${font}CONKY PIDs ${hr 2}
 #${font DejaVu Sans Mono:size=10}${color ffb7ea}${exec pgrep -f conky}
-${font}${color 00ffae}FORTUNE ${hr 2}$color
+${font Impact:bold:size=12}${color 00ffae}FORTUNE ${hr 2}$color
 ${offset 15}${font DejaVu Sans Mono:size=10}${execi 600 fortune -s | fold -w34}
 ]]
