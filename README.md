@@ -11,7 +11,8 @@
 > $ conky -c ~/.conkyrc   
 > $ conky
 
-## **Updated - 1**   
+## **Update - 1**   
+
 - fortune lib required for new .conkyrc  
 > sudo zypper in fortune     
 
