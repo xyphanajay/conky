@@ -8,6 +8,7 @@
 > $ git clone https://github.com/xyphanajay/conky.git   
 - Move all files to ~/   
 - OPEN .conkyrc FILE AND CHANGE ETH ADP, WIFI ADP and HOME location, accordingly!
+- **DO CUSTOMIZE BEFORE USING IT**
 > $ cd conky   
 > $ cp -r ./* ~/
 - Execute Conky   
