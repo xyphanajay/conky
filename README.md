@@ -30,3 +30,7 @@
 
 ## **Update - 3**  
 ![alt text](https://github.com/xyphanajay/conky/blob/master/Conky.png)
+
+## **Update - 4**  
+- Entopia font required for new .conkyrc   and .conkyrc1   
+![alt text](https://github.com/xyphanajay/conky/blob/master/Screenshot4.png)
